@@ -16,12 +16,6 @@ Specify the file path of the image to output. Default `diagram.png`.
 
 If necessary, specify options to add to `php-class-diagram`. Default ``.
 
-## Outputs
-
-## `time`
-
-Outputs the date and time when processing was completed.
-
 ## Example usage
 
 This is an example of creating a class diagram from the directory for which you want to create a class diagram in the checked out workspace and uploading it as a artifact.
@@ -45,12 +39,11 @@ jobs:
         with:
           target-path: src
           output-path: diagram.png
-          options: --disable-class-properties --disable-class-methods
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: diagram.png
+          name: Class_Diagram
           path: diagram.png
           retention-days: 5
 ```
