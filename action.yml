@@ -1,0 +1,25 @@
+name: 'php-class-diagram'
+description: 'Create class diagram action.'
+inputs:
+  src-directory:
+    description: 'Target directory.'
+    required: true
+    default: 'src'
+  output-path:
+    description: 'Output image path.'
+    required: false
+    default: 'diagram.png'
+  options:
+    description: 'Additional options of php-class-diagram.'
+    required: false
+    default: ''
+outputs:
+  time:
+    description: 'Completed date.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.src-directory }}
+    - ${{ inputs.output-path }}
+    - ${{ inputs.options }}
