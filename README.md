@@ -21,7 +21,7 @@ After you generate the diagram in your working directory with this action, use a
 
 ## `output-path`
 
-Specify the file path of the image to output. Default `diagram.png`.
+Specify the file path of the image to output. Default `php-class-diagram.png`.
 
 ## `options`
 
