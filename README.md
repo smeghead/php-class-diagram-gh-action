@@ -2,11 +2,22 @@
 
 Github Actions CI action of php-class-diagram.
 
+> A CLI tool that parses the PHP source directory and generates PlantUML class diagram scripts as output.
+> [php-class-diagram](https://github.com/smeghead/php-class-diagram)
+
+
+This is a Github Actions action that uses php-class-diagram to generate a class diagram from PHP source code.
+This action places a class diagram with the specified file name in the runner's default working directory (GITHUB_WORKSPACE).
+
+[Accessing files created by a container action | Creating a Docker container action - GitHub Docs](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action#accessing-files-created-by-a-container-action)
+
+After you generate the diagram in your working directory with this action, use another action to upload it to an artifact, deploy it to Github Pages, or commit it to your repository.
+
 ## Inputs
 
-## `src-directory`
+## `target-path`
 
-**Required** Specify the target directory in the repository for which you want to generate class diagrams. Default `"src"`.
+**Required** Specify the target source code directory in the repository for which you want to generate class diagrams. Default `"src"`.
 
 ## `output-path`
 
