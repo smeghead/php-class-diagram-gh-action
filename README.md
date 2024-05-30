@@ -34,6 +34,8 @@ This is an example of creating a class diagram from the directory for which you 
  * .github/workflows/php-class-diagram.yml
 
 ```
+name: PHP Class Diagram
+
 on: [push]
 
 jobs:
