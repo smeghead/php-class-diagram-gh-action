@@ -8,7 +8,7 @@ repo=$GITHUB_ACTION_REPOSITORY
 branch=$GITHUB_REF_NAME
 
 format=png
-if echo $output_path | grep -q ".svg" ]]; then
+if echo $output_path | grep -q ".svg"; then
 	options="$options --svg-topurl=https://github.com/$repo/blob/$target_path"
 	format=svg
 fi
