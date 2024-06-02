@@ -27,6 +27,14 @@ Specify the file path of the image to output. Default `php-class-diagram.png`.
 
 If necessary, specify options to add to `php-class-diagram`. Default ``.
 
+## `target-repo`
+
+Specify github repository. (ex. smeghead/php-class-diagram)
+
+## `target-branch`
+
+Specify branch name of github repository. (ex. main)
+
 ## Example usage
 
 This is an example of creating a class diagram from the directory for which you want to create a class diagram in the checked out workspace and uploading it as a artifact.
@@ -52,6 +60,8 @@ jobs:
         with:
           target-path: src
           output-path: diagram.svg
+          target-repo: ${{ github.repository }}
+          target-branch: ${{ github.ref_name }}
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
