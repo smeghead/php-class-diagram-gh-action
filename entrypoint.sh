@@ -13,4 +13,5 @@ if echo $output_path | grep -q ".svg"; then
 	format=svg
 fi
 
+echo php-class-diagram $options ${GITHUB_WORKSPACE}/$target_path >&2
 php-class-diagram $options ${GITHUB_WORKSPACE}/$target_path | plantuml -pipe -t${format} > ${GITHUB_WORKSPACE}/${output_path}
