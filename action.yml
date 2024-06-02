@@ -8,11 +8,19 @@ inputs:
   output-path:
     description: 'Output image path.'
     required: false
-    default: 'php-class-diagram.png'
+    default: 'php-class-diagram.svg'
   options:
     description: 'Additional options of php-class-diagram.'
     required: false
     default: ''
+  target-repo:
+    description: 'Target repository. (smeghead/php-class-diagram)'
+    required: false
+    default: ''
+  target-branch:
+    description: 'Target branch name. (main)'
+    required: false
+    default: 'main'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -20,3 +28,5 @@ runs:
     - ${{ inputs.target-path }}
     - ${{ inputs.output-path }}
     - ${{ inputs.options }}
+    - ${{ inputs.target-repo }}
+    - ${{ inputs.target-branch }}

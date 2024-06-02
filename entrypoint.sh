@@ -3,13 +3,12 @@
 target_path=$1
 output_path=$2
 options=$3
-
-repo=$GITHUB_ACTION_REPOSITORY
-branch=$GITHUB_REF_NAME
+target_repo=$4
+target_branch=$5
 
 format=png
 if echo $output_path | grep -q ".svg"; then
-	options="$options --svg-topurl=https://github.com/$repo/blob/$target_path"
+	options="$options --svg-topurl=https://github.com/$target_repo/blob/$target_branch/$target_path"
 	format=svg
 fi
 
