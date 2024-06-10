@@ -71,3 +71,6 @@ jobs:
           retention-days: 5
 ```
 
+In addition to uploading to an artifact, you can use the following actions to deploy to Github Pages.
+
+* [actions/deploy-pages: GitHub Action to publish artifacts to GitHub Pages for deployments](https://github.com/actions/deploy-pages)
